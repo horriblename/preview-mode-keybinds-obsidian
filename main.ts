@@ -36,14 +36,10 @@ export default class PreviewKeybinds extends Plugin {
 	async onload() {
 		await this.loadSettings();
 
-		// This adds a settings tab so the user can configure various aspects of the plugin
 		this.addSettingTab(new PreviewKeybindsSettingTab(this.app, this));
 
       this.registerEvent(this.app.workspace.on("layout-change", this.onLayoutChange));
 	}
-   /*onPlaceholderEvent(cm: Editor): (instance: Editor, option: string) => void {
-      throw new Error('Method not implemented.');
-   }*/
 
    private readonly onLayoutChange= (): void => {
       const previews: HTMLElement[] =  Array.from(document.querySelectorAll(".markdown-preview-view"));
@@ -70,7 +66,6 @@ export default class PreviewKeybinds extends Plugin {
             preview.applyScroll(preview.getScroll() + this.settings.linesToScroll);
             break;
          case this.settings.enterEditMode:
-            /* kind of hacky */
             (this.app as any).commands.executeCommandById('markdown:toggle-preview');
             e.preventDefault();
             break;
