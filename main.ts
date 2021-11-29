@@ -1,5 +1,6 @@
 import { 
    App, 
+   MarkdownPreviewView, 
    MarkdownView, 
    Plugin, 
    PluginSettingTab, 
@@ -53,9 +54,10 @@ export default class PreviewKeybinds extends Plugin {
    }
 
    private readonly onKeyDown = (e: KeyboardEvent) => {
-      const view = this.app.workspace.getActiveViewOfType(MarkdownView);
-      /* this works but this.app.workspave.getActiveViewOfType(MarkdownView).previewMode.applyScroll() doesn't. why?? */
-      const preview = this.app.workspace.getActiveViewOfType(MarkdownView).previewMode;
+      const view:MarkdownView = this.app.workspace.getActiveViewOfType(MarkdownView);
+      if (!view) return;
+
+      const preview:MarkdownPreviewView = view.previewMode;
       if (view.containerEl.querySelector('.is-searching') || !preview) {
          console.debug('skipping keyboard event ', e.key);
       }
@@ -70,7 +72,7 @@ export default class PreviewKeybinds extends Plugin {
          case this.settings.enterEditMode:
             /* kind of hacky */
             (this.app as any).commands.executeCommandById('markdown:toggle-preview');
-            e.preventDefault()
+            e.preventDefault();
             break;
          case this.settings.searchDoc:
             view.showSearch(false);
