@@ -70,6 +70,7 @@ export default class PreviewKeybinds extends Plugin {
          case this.settings.enterEditMode:
             /* kind of hacky */
             (this.app as any).commands.executeCommandById('markdown:toggle-preview');
+            e.preventDefault()
             break;
          case this.settings.searchDoc:
             view.showSearch(false);
@@ -79,7 +80,6 @@ export default class PreviewKeybinds extends Plugin {
             preview.applyScroll(0);
             break;
          case this.settings.scrollBottom:
-            // doesn't work TODO
             preview.applyScroll(view.editor.lastLine());
             break;
          default:
@@ -149,7 +149,6 @@ class PreviewKeybindsSettingTab extends PluginSettingTab {
 
 		new Setting(containerEl)
 			.setName('Scroll Down')
-			//.setDesc('Toggle Plugin')
 			.addText(text => text 
 				.setValue(this.plugin.settings.down)
 				.onChange(async (value) => {
@@ -161,7 +160,6 @@ class PreviewKeybindsSettingTab extends PluginSettingTab {
 
 		new Setting(containerEl)
 			.setName('Enter Edit Mode')
-			//.setDesc('Toggle Plugin')
 			.addText(text => text 
 				.setValue(this.plugin.settings.enterEditMode)
 				.onChange(async (value) => {
@@ -173,7 +171,6 @@ class PreviewKeybindsSettingTab extends PluginSettingTab {
 
 		new Setting(containerEl)
 			.setName('Search')
-			//.setDesc('Toggle Plugin')
 			.addText(text => text 
 				.setValue(this.plugin.settings.searchDoc)
 				.onChange(async (value) => {
@@ -185,7 +182,6 @@ class PreviewKeybindsSettingTab extends PluginSettingTab {
 
 		new Setting(containerEl)
 			.setName('Scroll to Bottom')
-			//.setDesc('Toggle Plugin')
 			.addText(text => text 
 				.setValue(this.plugin.settings.scrollBottom)
 				.onChange(async (value) => {
@@ -197,7 +193,6 @@ class PreviewKeybindsSettingTab extends PluginSettingTab {
 
 		new Setting(containerEl)
 			.setName('Scroll to Top')
-			//.setDesc('Toggle Plugin')
 			.addText(text => text 
 				.setValue(this.plugin.settings.scrollTop)
 				.onChange(async (value) => {
