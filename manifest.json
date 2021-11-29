@@ -1,7 +1,7 @@
 {
 	"id": "preview-mode-keybinds",
 	"name": "Preview Mode Keybinds",
-	"version": "0.0.1",
+	"version": "0.1.1",
 	"minAppVersion": "0.12.0",
 	"description": "Adds keybindings to preview mode (vim-like key-bindings by default)",
 	"author": "Pei Yang Ching",
