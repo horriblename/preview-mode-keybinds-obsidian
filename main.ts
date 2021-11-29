@@ -1,6 +1,5 @@
 import { 
    App, 
-   MarkdownPreviewView, 
    MarkdownView, 
    Plugin, 
    PluginSettingTab, 
