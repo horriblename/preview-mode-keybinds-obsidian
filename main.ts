@@ -54,8 +54,10 @@ export default class PreviewKeybinds extends Plugin {
       if (!view) return;
 
       const preview:MarkdownPreviewView = view.previewMode;
-      if (view.containerEl.querySelector('.is-searching') || !preview) {
+      
+      if (preview.containerEl.classList.contains('is-searching') || !preview) {
          console.debug('skipping keyboard event ', e.key);
+         return;
       }
 
       switch (e.key) {
@@ -72,7 +74,7 @@ export default class PreviewKeybinds extends Plugin {
             view.showSearch(false);
             break;
          case this.settings.scrollTop:
-            preview.applyScroll(0);
+            preview.applyScroll(999);
             break;
          case this.settings.scrollBottom:
             preview.applyScroll(view.editor.lastLine());
