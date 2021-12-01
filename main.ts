@@ -74,7 +74,7 @@ export default class PreviewKeybinds extends Plugin {
             view.showSearch(false);
             break;
          case this.settings.scrollTop:
-            preview.applyScroll(999);
+            preview.applyScroll(0);
             break;
          case this.settings.scrollBottom:
             preview.applyScroll(view.editor.lastLine());
