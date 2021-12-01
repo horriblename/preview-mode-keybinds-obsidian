@@ -67,11 +67,9 @@ export default class PreviewKeybinds extends Plugin {
             break;
          case this.settings.enterEditMode:
             (this.app as any).commands.executeCommandById('markdown:toggle-preview');
-            e.preventDefault();
             break;
          case this.settings.searchDoc:
             view.showSearch(false);
-            e.preventDefault();
             break;
          case this.settings.scrollTop:
             preview.applyScroll(0);
@@ -82,6 +80,7 @@ export default class PreviewKeybinds extends Plugin {
          default:
             return;
       }
+      e.preventDefault();
    }
 
 
