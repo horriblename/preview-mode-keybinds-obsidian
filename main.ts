@@ -87,9 +87,6 @@ export default class PreviewKeybinds extends Plugin {
 
 
 	async onunload() {
-      this.app.workspace.iterateCodeMirrors((cm) => {
-         cm.off('optionChange', this.onLayoutChange);
-      });
 	}
 
 	async loadSettings() {
