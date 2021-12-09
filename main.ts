@@ -38,27 +38,20 @@ export default class PreviewKeybinds extends Plugin {
 
 		this.addSettingTab(new PreviewKeybindsSettingTab(this.app, this));
 
-      this.registerEvent(this.app.workspace.on("layout-change", this.onLayoutChange));
+      this.registerDomEvent(document, "keydown", this.onKeyDown);
 	}
-
-   private readonly onLayoutChange= (): void => {
-      const previews: HTMLElement[] =  Array.from(document.querySelectorAll(".markdown-preview-view"));
-      previews.forEach((preview) => {
-         /* Using parent element to potentially fix preview not being focused after closing search bar, revert if doesn't work? */
-         this.registerDomEvent(preview.parentElement, "keydown", this.onKeyDown);
-      })
-   }
 
    private readonly onKeyDown = (e: KeyboardEvent) => {
       const view:MarkdownView = this.app.workspace.getActiveViewOfType(MarkdownView);
-      if (!view) return;
-
-      const preview:MarkdownPreviewView = view.previewMode;
-      
-      if (preview.containerEl.classList.contains('is-searching') || !preview) {
-         console.debug('skipping keyboard event ', e.key);
+      if ( !view || 
+            view.getMode() !== 'preview' || 
+            document.activeElement instanceof HTMLInputElement
+         ){
+         console.debug('skipping key: ', e.key);
          return;
       }
+
+      const preview:MarkdownPreviewView = view.previewMode;
 
       switch (e.key) {
          case this.settings.up:
