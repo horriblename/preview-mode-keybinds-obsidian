@@ -23,13 +23,11 @@ Here is a list of default keybindings:
 
 <!--### Installation
 
-This plug-in is not yet in Obsidian's official community plugins store. If you wish to use this plugin, download the latest release zip file (preview-mode-keybinds-_version_.zip) from the [releases page](https://github.com/horriblename/preview-mode-keybinds-obsidian/releases), and extract the files into a new folder under `.obsidian/plugins` under the root of your vault folder.
+This plug-in is not yet in Obsidian's official community plugins store. If you wish to use this plugin, download the latest release (`main.js` and `manifest.json`) from the [releases page](https://github.com/horriblename/preview-mode-keybinds-obsidian/releases), and move the files into a new folder `.obsidian/plugins/preview-mode-keybinds-obsidian` under the root of your vault folder.
 
 Then, disable 'Safe mode' under 'Settings > Community plugins' and enable 'Preview Mode Keybinds'.
 
 
 **For your safety, please verify yourself that a plugin is safe before installing it**-->
 
-### Known Issues
 
-- The Preview window may lose focus and temporarily 'lose' keybindings at times, i.e. after closing search bar or closing settings. Click on the window again to regain focus. I am working on a fix
