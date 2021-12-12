@@ -6,7 +6,7 @@ This plugin enables customizable keybindings in markdown preview mode(or reader 
 
 Keybindings can be customized from the settings tab. Only non-space character keys (letters, symbols and digits) can be used for keybindings. Arrow keys, enter, space, tab etc. are not supported.
 
-Currently no modifier keys are supported (not even shift). Modifiers *may* be implemented in the future, but for now I don't see any reason to.
+Currently no modifier keys are supported. 
 
 
 
