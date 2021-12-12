@@ -1,6 +1,6 @@
 ## Obsidian Preview Mode Keybinds
 
-This plugin enables customizable keybindings in markdown preview mode(or reader mode in future releases). Basic Navigation and Search keybinds are currently implemented, uses vim-like keybindings by default
+This plugin enables customizable keybindings in markdown preview mode <!--(or reader mode in future releases)-->. Basic Navigation and Search keybinds are currently implemented, uses vim-like keybindings by default
 
 ### Keybindings
 
