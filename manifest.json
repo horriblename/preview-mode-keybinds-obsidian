@@ -1,9 +1,9 @@
 {
-	"id": "reading-mode-navigation",
-	"name": "Preview Mode Navigation",
+	"id": "reading-mode-navigation-keys",
+	"name": "Preview Mode Navigation Keys",
 	"version": "0.1.3",
 	"minAppVersion": "0.12.0",
-	"description": "Adds vim-like navigation keybindings to preview mode(reader mode)",
+	"description": "Adds vim-like navigation keybindings to preview mode",
 	"author": "Pei Yang Ching",
 	"authorUrl": "https://github.com/horriblename",
 	"isDesktopOnly": true
