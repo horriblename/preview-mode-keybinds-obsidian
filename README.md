@@ -21,13 +21,13 @@ Here is a list of default keybindings:
 - `/` - Search
 - `i` - Enter edit mode
 
-<!--### Installation
+### Installation
 
-This plug-in is not yet in Obsidian's official community plugins store. If you wish to use this plugin, download the latest release (`main.js` and `manifest.json`) from the [releases page](https://github.com/horriblename/preview-mode-keybinds-obsidian/releases), and move the files into a new folder `.obsidian/plugins/preview-mode-keybinds-obsidian` under the root of your vault folder.
+Download the latest release (`main.js` and `manifest.json`) from the [releases page](https://github.com/horriblename/preview-mode-keybinds-obsidian/releases), and move the files into a new folder `.obsidian/plugins/preview-mode-keybinds-obsidian` under the root of your vault folder.
 
 Then, disable 'Safe mode' under 'Settings > Community plugins' and enable 'Preview Mode Keybinds'.
 
 
-**For your safety, please verify yourself that a plugin is safe before installing it**-->
+**For your safety, please verify yourself that a plugin is safe before installing it**
 
 
